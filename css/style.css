@@ -1,0 +1,187 @@
+/*Removes scroll bar & sets bg image to size of window*/
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    color: aliceblue;
+    background-image: url(../images/canvas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 0;
+}
+
+input{
+    display: block;
+    height: 10px;
+    width: 72px;
+    margin-top: 10px;
+}
+
+
+.box{
+    width: 33%;
+}
+
+input[type = "radio"] {
+    display: none;
+    appearance: none;
+}
+
+input[type = "button"] {
+    background-color: #bf5711;
+    height: 30px;
+    color: aliceblue;
+    border-radius: 25px;
+    border: none;
+}
+
+.radios{
+    display: block;
+    appearance: button;
+}
+
+input[type = "color"] {
+    border-radius: 25px;
+    background-color: white;
+    width: 40px;
+    margin-left: 15px;
+    height: 20px;
+}
+
+.textbox{
+    padding: 11px;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.text{
+    font-size: 70%;
+    font-family: helvetica;
+    color: white;
+    padding-top: 40px;
+    padding-left:5px;
+}
+
+.rightbar { 
+    background-color: #ABAAAA;
+    width: 100px;
+    height: 95%;
+    position: absolute;
+    right: 0;
+    margin-left: 200px;
+    margin-right: auto;
+    border-radius: 25px;
+    margin: 15px;
+    margin-right: 25px;
+    
+}
+
+.toolbar{
+    margin: 0; padding: 0;
+    float: left;
+    width: 100px; height: 100%;
+    background-color: transparent;
+    position: fixed;
+    top: 0; z-index: 1; /*over canv*/
+    appearance: none;
+    border-style: solid;
+    border-right: none;
+    border-top: none;
+    border: none;
+    
+}
+
+
+
+/*Make this in a 100% height div and auto margin top and bottom*/
+.radioDiv{
+/*    background-color: gray;*/
+    height: 100px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+/*ALL RADIOBTN DESIGN CODE:*/
+.toolbar input{
+    margin:0;padding:0;
+    appearance:none;
+}
+.marker{
+    background-image:url(../images/marker.png);
+    margin-left: 20px;
+}
+
+.circle{
+    background-image:url(../images/circle.png);
+    margin-left: 20px;
+}
+
+.rectangle{
+    background-image:url(../images/square.png);
+    margin-left: 20px;
+}
+
+.line{
+    background-image:url(../images/line.png);
+    margin-left: 20px;
+}
+
+.eraser{
+    background-image:url(../images/eraser.png);
+    margin-left: 20px;
+}
+
+
+
+.toolbar input:active +.effects{opacity: .9;}
+.toolbar input:checked +.effects{
+    filter: none;
+}
+.effects{
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:60px;height:100px;
+    transition: all 200ms ease-in;
+    filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+.effects:hover{
+    filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+/*END*/
+
+
+
+
+canvas {
+    z-index: 0;
+    display: block;
+}
+
+.i {margin-left: 8px;}
+.ii{margin-left: 5px;}
+.iii{margin-left: 20px;}
+.iv {margin-left: 14px;
+    opacity: 0.8;}
+.v{margin-left: 2px;}
+
+.onOff{ /*radio but*/
+    display: block;
+    appearance: radio;
+    margin-left: 27px;
+}
+
+.reset{
+    display: inline;
+    padding-left: 15px;
+}
+
+.save{
+    display: inline;
+    padding-left: 30px;
+    padding-top: 15px;
+}
+.a{margin-left: 15px;}

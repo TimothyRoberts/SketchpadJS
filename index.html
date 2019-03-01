@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pad</title>
+		<link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div class="box"></div>
+        
+        <div class="rightbar">
+            
+            <div class="textbox">
+                <span class="text">LINE WIDTH</span>
+                <input type="number" value ="4" name="weight" id="linewidth">
+<!--                <span class="text iv v">(press enter)</span>-->
+            </div>
+            
+            <hr />
+            
+            <div class="textbox">
+                <span class="text i">COLOUR</span>
+                <input type="color" name="color" id="colorBtn">
+            </div>
+            
+            <hr />
+            
+            <div class="textbox">
+                <span class="text iii">FILL</span>
+                <span class="text iv">(off/on)</span>
+                <input type="checkbox" value="fill" id="fillOn" class="onOff" name="check">
+                <input type="color" name="color" id="fillBtn">
+            </div>
+            
+            <hr />
+            
+            <div class="textbox">
+                <span class="text ii">GRADIENT</span>
+                <span class="text iv">(off/on)</span>
+                <input type="checkbox" value="gradient" id="gradOn" class="onOff" name="check">
+                <input type="color"name="grad1" id="gradBtn1">
+                <input type="color"name="grad2" id="gradBtn2">
+                
+            </div>
+        </div>
+        
+        <div class="box"></div>
+        
+        <!--Creating the canvas-->
+        <canvas id="mainCanvas"></canvas>
+        
+        <div class="toolbar">
+            <div class="radioDiv">
+                <input id="markerBtn" type="radio" name="tool" value="marker" checked/>
+                <label class="effects marker" for="markerBtn"></label>
+            </div>
+            <div class="radioDiv firstButton">
+                <input id="circleBtn" type="radio" name="tool" value="circle"/>
+                <label class="effects circle" for="circleBtn"></label>
+            </div>
+            <div class="radioDiv">
+                <input id="rectangleBtn" type="radio" name="tool" value="rectangle"/>
+                <label class="effects rectangle" for="rectangleBtn"></label>
+            </div>
+            <div class="radioDiv">
+                <input id="lineBtn" type="radio" name="tool" value="line"/>
+                <label class="effects line" for="lineBtn"></label>
+            </div>
+            <div class="radioDiv">
+                <input id="eraserBtn" type="radio" name="tool" value="eraser"/>
+                <label class="effects eraser" for="eraserBtn"></label>
+            </div>
+            <div class="radioDiv reset">
+                <input class="reset" type="button" value="CLEAR" id="resetBtn">
+            </div>
+            <div class="radioDiv a">
+                <input class="save" type="button" value="SAVE" id="saveBtn">
+            </div>
+        </div>
+        
+        
+        
+        
+        <script src="js/Rectangle.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
